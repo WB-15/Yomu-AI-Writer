@@ -42,7 +42,7 @@ export default function TestimonialsCarousel() {
       quote:
         "“Sourcely's use of AI impressed me by finding suitable and relevant articles for hard-to-research essay topics.“",
       name: "Greg Sebastian",
-      role: "Student",
+      role: "Master student",
       href: "https://www.fing.edu.uy/",
       team: "@UDELAR",
       link: "https://www.fing.edu.uy/",
