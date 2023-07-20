@@ -4,14 +4,15 @@ export const metadata = {
 };
 
 import Link from "next/link";
+import { SignIn } from "@clerk/nextjs";
 
-export default function SignIn() {
+export default function SignInYomu() {
   return (
     <section className="bg-gradient-to-b from-gray-100 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
           {/* Page header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-12">
             <h1 className="h1">
               Welcome back. We exist to make paper writing easier
             </h1>
@@ -19,69 +20,7 @@ export default function SignIn() {
 
           {/* Form */}
           <div className="max-w-sm mx-auto">
-            <form>
-              <div className="flex flex-wrap -mx-3 mb-4">
-                <div className="w-full px-3">
-                  <label
-                    className="block text-gray-800 text-sm font-medium mb-1"
-                    htmlFor="email"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    className="form-input w-full text-gray-800"
-                    placeholder="Enter your email address"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mb-4">
-                <div className="w-full px-3">
-                  <div className="flex justify-between">
-                    <label
-                      className="block text-gray-800 text-sm font-medium mb-1"
-                      htmlFor="password"
-                    >
-                      Password
-                    </label>
-                    <Link
-                      href="/reset-password"
-                      className="text-sm font-medium text-blue-600 hover:underline"
-                    >
-                      Having trouble signing in?
-                    </Link>
-                  </div>
-                  <input
-                    id="password"
-                    type="password"
-                    className="form-input w-full text-gray-800"
-                    placeholder="Enter your password"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mb-4">
-                <div className="w-full px-3">
-                  <div className="flex justify-between">
-                    <label className="flex items-center">
-                      <input type="checkbox" className="form-checkbox" />
-                      <span className="text-gray-600 ml-2">
-                        Keep me signed in
-                      </span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mt-6">
-                <div className="w-full px-3">
-                  <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full">
-                    Sign in
-                  </button>
-                </div>
-              </div>
-            </form>
+            <SignIn />
             <div className="flex items-center my-6">
               <div
                 className="border-t border-gray-300 grow mr-3"
@@ -93,7 +32,7 @@ export default function SignIn() {
                 aria-hidden="true"
               ></div>
             </div>
-            <form>
+            {/* <form>
               <div className="flex flex-wrap -mx-3 mb-3">
                 <div className="w-full px-3">
                   <button className="btn px-0 text-white bg-gray-900 hover:bg-gray-800 w-full relative flex items-center">
@@ -126,7 +65,7 @@ export default function SignIn() {
                   </button>
                 </div>
               </div>
-            </form>
+            </form> */}
             <div className="text-gray-600 text-center mt-6">
               Don't you have an account?{" "}
               <Link
