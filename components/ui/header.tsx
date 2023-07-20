@@ -6,7 +6,7 @@ import Link from "next/link";
 import Logo from "./logo";
 import Dropdown from "@/components/utils/dropdown";
 import MobileMenu from "./mobile-menu";
-
+import { UserButton } from "@clerk/nextjs";
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
 
@@ -92,6 +92,9 @@ export default function Header() {
                     />
                   </svg>
                 </Link>
+              </li>
+              <li className=" ml-3">
+                <UserButton afterSignOutUrl="/" />
               </li>
             </ul>
           </nav>
