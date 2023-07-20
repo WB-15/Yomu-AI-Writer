@@ -35,9 +35,9 @@ export default function Header() {
           </div>
 
           {/* Desktop navigation */}
-          <nav className="hidden md:flex md:grow">
+          <nav className="hidden md:flex md:grow ">
             {/* Desktop menu links */}
-            <ul className="flex grow justify-end flex-wrap items-center">
+            <ul className="flex grow justify-center flex-wrap items-center md:grow -mr-[128px] ">
               <li>
                 <Link
                   href="/"
@@ -66,7 +66,7 @@ export default function Header() {
             </ul>
 
             {/* Desktop sign in links */}
-            <ul className="flex grow justify-end flex-wrap items-center">
+            <ul className="flex  justify-end flex-wrap items-center">
               <li>
                 <Link
                   href="/signin"
