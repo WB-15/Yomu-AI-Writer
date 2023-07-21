@@ -6,7 +6,6 @@ import Link from "next/link";
 import Logo from "./logo";
 import Dropdown from "@/components/utils/dropdown";
 import MobileMenu from "./mobile-menu";
-import { UserButton } from "@clerk/nextjs";
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
 
@@ -69,7 +68,7 @@ export default function Header() {
             <ul className="flex  justify-end flex-wrap items-center">
               <li>
                 <Link
-                  href="/signin"
+                  href="https://app.yomu.ai/signin"
                   className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Sign in
@@ -77,7 +76,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/signup"
+                  href="https://app.yomu.ai/signup"
                   className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
                 >
                   <span>Sign up</span>
@@ -92,9 +91,6 @@ export default function Header() {
                     />
                   </svg>
                 </Link>
-              </li>
-              <li className=" ml-3">
-                <UserButton afterSignOutUrl="/" />
               </li>
             </ul>
           </nav>
