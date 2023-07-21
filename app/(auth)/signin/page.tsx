@@ -4,7 +4,6 @@ export const metadata = {
 };
 
 import Link from "next/link";
-import { SignIn } from "@clerk/nextjs";
 
 export default function SignInYomu() {
   return (
@@ -20,7 +19,6 @@ export default function SignInYomu() {
 
           {/* Form */}
           <div className="max-w-sm mx-auto">
-            <SignIn />
             <div className="flex items-center my-6">
               <div
                 className="border-t border-gray-300 grow mr-3"
