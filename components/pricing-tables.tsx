@@ -133,7 +133,7 @@ export default function PricingTables() {
                 data-aos-delay="450"
               >
                 <div className="mb-4">
-                  <div className="text-lg font-bold mb-1">Enterprise</div>
+                  <div className="text-lg font-bold mb-1">Pro</div>
                   <div className="inline-flex items-baseline mb-2">
                     <span className="text-3xl font-bold">$</span>
                     <span className="text-4xl font-bold">14</span>
@@ -235,7 +235,7 @@ export default function PricingTables() {
                 data-aos-delay="450"
               >
                 <div className="mb-4">
-                  <div className="text-lg font-bold mb-1">Enterprise</div>
+                  <div className="text-lg font-bold mb-1">Pro</div>
                   <div className="inline-flex items-baseline mb-2">
                     <span className="text-3xl font-bold">$</span>
                     <span className="text-4xl font-bold">134</span>
