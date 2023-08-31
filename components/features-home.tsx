@@ -1,13 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Transition } from "@headlessui/react";
-import Image from "next/image";
-import TopImage from "@/public/images/features-top-image.png";
-import FeaturesBg01 from "@/public/images/features-home-bg-01.png";
-import FeaturesElement01 from "@/public/images/features-home-element-01.png";
-import FeaturesElement02 from "@/public/images/features-home-element-02.png";
-import FeaturesElement03 from "@/public/images/features-home-element-03.png";
 
 export default function FeaturesHome() {
   const [tab, setTab] = useState<number>(1);
@@ -25,295 +18,99 @@ export default function FeaturesHome() {
 
   return (
     <section className="relative">
-      {/* Section background (needs .relative class on parent and next sibling elements) */}
-      <div
-        className="absolute inset-0 bg-gray-100 pointer-events-none mb-16"
-        aria-hidden="true"
-      ></div>
-      <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2"></div>
-
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-12 md:pt-20">
+      <div className=" max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="pt-12 md:pt-48">
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">Explore features</h1>
-            <p className="text-xl text-gray-600">
+          <div className="max-w-3xl mx-auto text-center pb-[40px] md:pb-[48px]">
+            <p className=" text-[30px] text-[#211E1D] font-bold md:text-[56px] mb-4">
+              Explore features
+            </p>
+            <p className="text-[24px] text-[#211E1D] font-bold ">
               Step into the future of the academic writing.
             </p>
           </div>
-
-          {/* Top image */}
-          {/* <div className="pb-12 md:pb-16">
-            <Image src={TopImage} width={1104} alt="Features top" />
+          {/* <div className="p-2 w-auto mb-8">
+            <ul className="flex grow justify-center flex-wrap items-center gap-8">
+              <li>Document AI</li>
+              <li>Essay copilot</li>
+              <li>Use AI</li>
+              <li>Citation</li>
+              <li>AI Detector</li>
+              <li>Plagiarism Checker</li>
+            </ul>
           </div> */}
-
-          {/* Section content */}
-          <div className="md:grid md:grid-cols-12 md:gap-6">
-            {/* Content */}
-            <div
-              className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6"
-              data-aos="fade-right"
-            >
-              <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <h3 className="h3 mb-3">Powerful suite of AI features</h3>
-                <p className="text-xl text-gray-600">
-                  Experience unparalleled writing assistance. From grammar
-                  correction to text summarization and from text shortening to
-                  expansion, along with AI autocomplete.
-                </p>
-              </div>
-              {/* Tabs buttons */}
-              <div className="mb-8 md:mb-0">
-                <button
-                  className={`text-left flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
-                    tab !== 1
-                      ? "bg-white shadow-md border-gray-200 hover:shadow-lg"
-                      : "bg-gray-200 border-transparent"
-                  }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setTab(1);
-                  }}
-                >
-                  <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">
-                      Your personal essay copilot
-                    </div>
-                    <div className="text-gray-600">
-                      Elevate your essay writing with an intelligent autopilot
-                      that delivers smart suggestions.
-                    </div>
-                  </div>
-                  <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow shrink-0 ml-3">
-                    <svg
-                      className="w-3 h-3 fill-current"
-                      viewBox="0 0 12 12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M11.953 4.29a.5.5 0 00-.454-.292H6.14L6.984.62A.5.5 0 006.12.173l-6 7a.5.5 0 00.379.825h5.359l-.844 3.38a.5.5 0 00.864.445l6-7a.5.5 0 00.075-.534z" />
-                    </svg>
-                  </div>
-                </button>
-                <button
-                  className={`text-left flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
-                    tab !== 2
-                      ? "bg-white shadow-md border-gray-200 hover:shadow-lg"
-                      : "bg-gray-200 border-transparent"
-                  }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setTab(2);
-                  }}
-                >
-                  <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">
-                      Edit your paper like a pro
-                    </div>
-                    <div className="text-gray-600">
-                      Utilize AI features including expansion, summarization,
-                      and more to refine your essays rapidly.
-                    </div>
-                  </div>
-                  <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow shrink-0 ml-3">
-                    <svg
-                      className="w-3 h-3 fill-current"
-                      viewBox="0 0 12 12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.854.146a.5.5 0 00-.525-.116l-11 4a.5.5 0 00-.015.934l4.8 1.921 1.921 4.8A.5.5 0 007.5 12h.008a.5.5 0 00.462-.329l4-11a.5.5 0 00-.116-.525z"
-                        fillRule="nonzero"
-                      />
-                    </svg>
-                  </div>
-                </button>
-                <button
-                  className={`text-left flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
-                    tab !== 3
-                      ? "bg-white shadow-md border-gray-200 hover:shadow-lg"
-                      : "bg-gray-200 border-transparent"
-                  }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setTab(3);
-                  }}
-                >
-                  <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">
-                      Consistently deliver top-tier papers
-                    </div>
-                    <div className="text-gray-600">
-                      Leverage our advanced grammar checker and plagiarism tool
-                      to ensure you produce and deliver work of the highest
-                      caliber every time
-                    </div>
-                  </div>
-                  <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow shrink-0 ml-3">
-                    <svg
-                      className="w-3 h-3 fill-current"
-                      viewBox="0 0 12 12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.334 8.06a.5.5 0 00-.421-.237 6.023 6.023 0 01-5.905-6c0-.41.042-.82.125-1.221a.5.5 0 00-.614-.586 6 6 0 106.832 8.529.5.5 0 00-.017-.485z"
-                        fill="#191919"
-                        fillRule="nonzero"
-                      />
-                    </svg>
-                  </div>
-                </button>
+          <div className="w-full flex-col flex-grow bg-[#ffffff] grid md:grid-cols-2 grid-cols-1 rounded-xl border-t-2 border-r-2 border-l-2 border-gray-300  shadow-md">
+            <div className="flex p-8 flex-col justify-center items-start gap-8 flex-1 self-stretch">
+              <p className="flex  justify-start text-[36px] font-bold text-[#211E1D] pb-[10px]">
+                Never get stuck at writing
+                <br /> your essay
+              </p>
+              <p className="text-gray-700 font-inter text-[20px] font-normal leading-tight tracking-tight">
+                Use the intelligent Document Assistant to help write
+                <br /> sections and give you feedback
+              </p>
+              <div className="flex text-white text-[18px] px-4 py-3 items-center gap-2 rounded-full border-t border-r border-b-2 border-l border-[#2D8C41] bg-[#55B469]">
+                Try it out
               </div>
             </div>
-
-            {/* Tabs items */}
-            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1">
-              <div className="transition-all">
-                <div
-                  className="relative flex flex-col text-center lg:text-right"
-                  data-aos="zoom-y-out"
-                  ref={tabs}
-                >
-                  {/* Item 1 */}
-                  <Transition
-                    show={tab === 1}
-                    className="w-full"
-                    enter="transition ease-in-out duration-700 transform order-first"
-                    enterFrom="opacity-0 translate-y-16"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in-out duration-300 transform absolute"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 -translate-y-16"
-                    beforeEnter={() => heightFix()}
-                    unmount={false}
-                  >
-                    <div className="relative inline-flex flex-col">
-                      <Image
-                        className="md:max-w-none mx-auto rounded"
-                        src={FeaturesBg01}
-                        width={500}
-                        height={375}
-                        alt="Features bg"
-                      />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 transform animate-float"
-                        src={FeaturesElement01}
-                        width={500}
-                        height={147}
-                        alt="Element 01"
-                        style={{ top: "22%" }}
-                      />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 transform animate-float animation-delay-500"
-                        src={FeaturesElement02}
-                        width={500}
-                        height={158}
-                        alt="Element 02"
-                        style={{ top: "39%" }}
-                      />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 bottom-0 transform animate-float animation-delay-1000"
-                        src={FeaturesElement03}
-                        width={500}
-                        height={167}
-                        alt="Element 03"
-                        style={{ top: "77%" }}
-                      />
+            <div className="flex p-3 items-start gap-2 flex-1">
+              <div className="w-full h-full rounded-[28px] pt-6 pl-6 pb-6 bg-[#f5f4f4] shadow-inner">
+                <div className="inline-flex p-5 flex-col items-start gap-5 rounded-l-[19px] bg-gray-100">
+                  <div className="w-full flex-1 text-Black font-inter text-[22px] font-bold leading-5">
+                    What is global warming?
+                  </div>
+                  <div className="w-full flex-1 text-Light-Black font-inter text-[14px] font-normal leading-tight tracking-tighter">
+                    Since the Industrial Revolution, the global annual
+                    temperature has increased in total by a little more than 1
+                    degree Celsius, or about 2 degrees Fahrenheit. Between
+                    1880—the year that accurate recordkeeping began—and 1980, it
+                    rose on average by 0.07 degrees Celsius (0.13 degrees
+                    Fahrenheit) every 10 years. Since 1981, however, the rate of
+                    increase has more than doubled: For the last 40 years, we’ve
+                    seen the global annual temperature rise by 0.18 degrees
+                    Celsius, or 0.32 degrees Fahrenheit, per decade.
+                  </div>
+                  <div className="flex w-full h-7 justify-center items-center gap-8 rounded-l-[8px] bg-[#f6f6f9]" />
+                  <div className="flex w-full h-[100px] justify-center items-center gap-8 rounded-l-[16px] bg-[#f6f6f9]" />
+                  <div className="inline-flex p-2 align-middle gap-2 border border-solid border-Stroke rounded-[20px] bg-White shadow-md">
+                    <div className="flex p-1 items-center gap-1/3 rounded-[10px] text-[10px] text-white border border-[#FF7531] bg-[#EF844F]">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <g clipPath="url(#clip0_763_3820)">
+                            <path
+                              d="M7.66797 5.33301L8.09223 7.90874L10.668 8.33301L8.09223 8.75727L7.66797 11.333L7.2437 8.75727L4.66797 8.33301L7.2437 7.90874L7.66797 5.33301Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M4.33333 2.6665L4.66332 4.66985L6.66667 4.99984L4.66332 5.32982L4.33333 7.33317L4.00335 5.32982L2 4.99984L4.00335 4.66985L4.33333 2.6665Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M7.66667 1.33301L7.90237 2.76397L9.33333 2.99967L7.90237 3.23538L7.66667 4.66634L7.43096 3.23538L6 2.99967L7.43096 2.76397L7.66667 1.33301Z"
+                              fill="white"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_763_3820">
+                              <rect
+                                width="10.6667"
+                                height="10.6667"
+                                fill="white"
+                                transform="translate(0.667969 0.666504)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                      <span>Document AI</span>
                     </div>
-                  </Transition>
-                  {/* Item 2 */}
-                  <Transition
-                    show={tab === 2}
-                    className="w-full"
-                    enter="transition ease-in-out duration-700 transform order-first"
-                    enterFrom="opacity-0 translate-y-16"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in-out duration-300 transform absolute"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 -translate-y-16"
-                    beforeEnter={() => heightFix()}
-                    unmount={false}
-                  >
-                    <div className="relative inline-flex flex-col">
-                      <Image
-                        className="md:max-w-none mx-auto rounded"
-                        src={FeaturesBg01}
-                        width={500}
-                        height={375}
-                        alt="Features bg"
-                      />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 bottom-0 transform animate-float animation-delay-1000"
-                        src={FeaturesElement03}
-                        width={500}
-                        height={167}
-                        alt="Element 03"
-                        style={{ top: "18%" }}
-                      />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 transform animate-float animation-delay-500"
-                        src={FeaturesElement02}
-                        width={500}
-                        height={158}
-                        alt="Element 02"
-                        style={{ top: "40%" }}
-                      />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 transform animate-float"
-                        src={FeaturesElement01}
-                        width={500}
-                        height={147}
-                        alt="Element 01"
-                        style={{ top: "79%" }}
-                      />
-                    </div>
-                  </Transition>
-                  {/* Item 3 */}
-                  <Transition
-                    show={tab === 3}
-                    className="w-full"
-                    enter="transition ease-in-out duration-700 transform order-first"
-                    enterFrom="opacity-0 translate-y-16"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in-out duration-300 transform absolute"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 -translate-y-16"
-                    beforeEnter={() => heightFix()}
-                    unmount={false}
-                  >
-                    <div className="relative inline-flex flex-col">
-                      <Image
-                        className="md:max-w-none mx-auto rounded"
-                        src={FeaturesBg01}
-                        width={500}
-                        height={375}
-                        alt="Features bg"
-                      />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 transform animate-float"
-                        src={FeaturesElement01}
-                        width={500}
-                        height={147}
-                        alt="Element 01"
-                        style={{ top: "22%" }}
-                      />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 transform animate-float animation-delay-500"
-                        src={FeaturesElement02}
-                        width={500}
-                        height={158}
-                        alt="Element 02"
-                        style={{ top: "39%" }}
-                      />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 bottom-0 transform animate-float animation-delay-1000"
-                        src={FeaturesElement03}
-                        width={500}
-                        height={167}
-                        alt="Element 03"
-                        style={{ top: "77%" }}
-                      />
-                    </div>
-                  </Transition>
+                  </div>
                 </div>
               </div>
             </div>

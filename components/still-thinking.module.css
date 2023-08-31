@@ -1,0 +1,27 @@
+/*  */
+
+.scroll-container {
+  overflow-y: scroll;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 6px; /* Adjust the scrollbar width */
+  display: none;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #6d0202; /* Adjust the thumb color */
+  border-radius: 3px; /* Adjust the thumb border radius */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Adjust the thumb color on hover */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Adjust the track color */
+}
+
+.text-middle-line {
+  text-decoration-line: strikethrough;
+}
