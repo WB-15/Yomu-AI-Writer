@@ -129,6 +129,12 @@ module.exports = withMT({
       zIndex: {
         "-1": "-1",
       },
+      screens: {
+        sm: "640px",
+        md: "860px",
+        lg: "1280px",
+        xl: "1440px",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],

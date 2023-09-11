@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import HeroImage from "@/public/image/HomeImage.png";
+import HeroImage from "@/public/image/Landing.svg";
 import Background from "@/public/image/Background.png";
 
 export default function FeedbackHome() {
@@ -61,7 +61,7 @@ export default function FeedbackHome() {
               <span>
                 {" "}
                 academic writing
-                <br /> with Yomu AI
+                <br className="hidden md:block" /> with Yomu AI
               </span>
             </div>
 

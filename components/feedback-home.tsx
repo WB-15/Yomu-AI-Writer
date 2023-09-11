@@ -61,22 +61,22 @@ const cards: Card[] = [
 
 export default function FeedbackHome() {
   return (
-    <section className="relative">
-      <div className=" max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-12 md:pt-48 pb-12 md:pb-48 gap-12">
+    <section className="relative lg:px-40 md:px-14 sm:px-6 px-4">
+      <div className="w-full">
+        <div className="flex flex-col pt-32 sm:pt-40 md:pt-52 pb-32 sm:pb-40 md:pb-52 gap-12">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center">
-            <p className=" text-[30px] text-[#211E1D] font-bold md:text-[56px] mb-4">
+            <p className=" text-[30px] sm:text-[40px] md:text-[56px] text-[#211E1D] font-semibold">
               Yomu is loved by the users
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {cards.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col w-88 h-72 p-6 flex-shrink-0 justify-between items-start border border-gray-300 rounded-lg"
+                className="flex flex-col w-88 h-72 p-6 flex-shrink-0 justify-between items-start border border-gray-300 rounded-[24px] bg-white"
               >
-                <span className="self-stretch text-black  font-semibold text-[18px] leading-normal">
+                <span className="self-stretch text-[#191919]  font-inter font-semibold text-[18px] leading-[145%]">
                   {item.header}
                 </span>
                 <div className="w-full h-72" />

@@ -1,7 +1,3 @@
-import Image from "next/image";
-import HeroImage from "@/public/image/HomeImage.png";
-import VideoThumb from "@/public/images/hero-image-01.png";
-import ModalVideo from "@/components/modal-video";
 import styles from "./still-thinking.module.css";
 
 export default function StillThinking() {

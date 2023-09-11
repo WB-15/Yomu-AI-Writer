@@ -79,75 +79,75 @@ export default function TestimonialsCarousel() {
   }, []);
 
   return (
-    <section className="relative">
-      {/* Social icons illustrations */}
+    <section className="relative lg:px-40 md:px-14 sm:px-6 px-4">
+      <div className="w-full flex flex-col gap-8">
+        <div className="text-center">
+          <p className="font-inter font-bold text-[#211E1D] text-[18px] sm:text-[24px] mb-3">
+            Trusted by universities and
+            <br className="block sm:hidden" /> academic
+            <br className="hidden sm:block" />
+            labs all over the world
+          </p>
+          <p
+            className="font-inter font-normal text-[10px] sm:text-[14px] text-gray-600"
+            data-aos="zoom-y-out"
+          >
+            Yomu has helped write essays, research papers, and
+            <br className="block sm:hidden" /> grants for students{" "}
+            <br className="hidden sm:block" /> and academics all over the world
+          </p>
+        </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-1 md:py-2">
-          {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="text-[24px] font-bold">
-              Trusted by universities and academic
-              <br /> labs all over the world
-            </span>
-            <p className="text-[15px] mt-4 text-gray-600" data-aos="zoom-y-out">
-              Yomu has helped write essays, research papers, and grants for
-              students
-              <br /> and academics all over the world
-            </p>
+        {/* Items */}
+        <div className="flex flex-row w-[calc(100%-10px)] sm:w-[calc(100%-40px)] gap-8 sm:gap-12 items-center justify-center">
+          <div className="flex items-center justify-center">
+            <Image
+              src={"/images/U2.webp"}
+              width="111"
+              height="31"
+              alt="aston logo"
+            />
+          </div>
+          <div className="flex items-center justify-center">
+            <Image
+              src={"/images/U3.webp"}
+              width="159"
+              height="66"
+              alt="cambridge logo"
+            />
+          </div>
+          <div className="flex items-center justify-center">
+            <Image
+              src={"/images/U1.webp"}
+              width="110"
+              height="39"
+              alt="harvard logo"
+            />
+          </div>
+          <div className="flex items-center justify-center">
+            <Image
+              src={"/images/U5.webp"}
+              width="56"
+              height="56"
+              alt="melbourne logo"
+            />
+          </div>
+          <div className="flex items-center justify-center">
+            <Image
+              src={"/images/U4.webp"}
+              width="77"
+              height="40"
+              alt="mit logo"
+            />
           </div>
 
-          {/* Items */}
-          <div className="max-w-sm md:max-w-4xl mx-auto grid gap-2 grid-cols-4 md:grid-cols-6">
-            <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
-              <Image
-                src={"/images/U2.webp"}
-                width="153"
-                height="31"
-                alt="aston logo"
-              />
-            </div>
-            <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
-              <Image
-                src={"/images/U3.webp"}
-                width="190"
-                height="40"
-                alt="cambridge logo"
-              />
-            </div>
-            <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
-              <Image
-                src={"/images/U1.webp"}
-                width="160"
-                height="39"
-                alt="harvard logo"
-              />
-            </div>
-            <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
-              <Image
-                src={"/images/U5.webp"}
-                width="80"
-                height="44"
-                alt="melbourne logo"
-              />
-            </div>
-            <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
-              <Image
-                src={"/images/U4.webp"}
-                width="77"
-                height="40"
-                alt="mit logo"
-              />
-            </div>
-
-            <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
-              <Image
-                src={"/images/U6.webp"}
-                width="80"
-                height="44"
-                alt="standford logo"
-              />
-            </div>
+          <div className="flex items-center justify-center">
+            <Image
+              src={"/images/U6.webp"}
+              width="60"
+              height="60"
+              alt="standford logo"
+            />
           </div>
         </div>
       </div>
